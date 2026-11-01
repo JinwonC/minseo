@@ -7,7 +7,7 @@
 <meta name="description" content="Portfolio of Minseo Park, YouTube producer and video editor: Wassup Man (Studio LuluLala), NAVER Shopping Live short-form, and more.">
 <meta property="og:title" content="Minseo Park — Video Producer & Editor">
 <meta property="og:description" content="24.2M views across 26 Wassup Man videos. 185 Shorts, three past 10M views.">
-<meta property="og:image" content="img/p3.jpg">
+<meta property="og:image" content="img/wm-grid-1.jpg">
 <!-- Apple SD Gothic Neo is the portfolio deck's font; Pretendard is the closest free match for Windows and Android. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
@@ -71,6 +71,16 @@ h1 { font-family: var(--display); font-weight: 700; font-size: clamp(48px, 9vw, 
 .track-head p { grid-column: 2; margin: 6px 0 0; color: var(--muted); }
 @media (max-width: 640px) { .track-head { grid-template-columns: 1fr; gap: 4px; } .track-head p { grid-column: 1; } }
 
+.reel { margin: 0 0 56px; }
+.reel-head { font-family: var(--display); font-size: clamp(22px, 3vw, 30px); margin: 0 0 18px; }
+.reel-head b { color: var(--accent); font-weight: 700; }
+.reel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.reel-row { display: grid; grid-template-columns: 3.7fr 1.33fr; gap: 12px; margin-top: 12px; align-items: stretch; }
+.reel a { display: block; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: #fff; }
+.reel img { width: 100%; height: auto; }
+.reel-row a { display: flex; align-items: center; }
+.reel-cap { margin-top: 10px; font-size: 14px; color: var(--muted); }
+@media (max-width: 760px) { .reel-grid, .reel-row { grid-template-columns: 1fr; } }
 .feature { margin: 0 0 56px; }
 .feature img { width: 100%; border-radius: 6px; }
 .feature figcaption { margin-top: 10px; font-size: 14px; color: var(--muted); }
@@ -110,6 +120,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
       <a href="#wassup-man">Wassup Man</a>
       <a href="#naver">NAVER Shopping Live</a>
       <a href="#more">More work</a>
+      <a class="contact" href="https://docs.google.com/document/d/1862yPai7PGF8jHtA5ghht4ic3S866PZZ5amnogLB-PM/edit?tab=t.0" target="_blank" rel="noopener">Resume ↗</a>
       <a class="contact" href="#contact">Contact</a>
     </nav>
   </div>
@@ -122,6 +133,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     <p class="lede">I plan, shoot and cut YouTube variety content and short-form video. Most recently a producer on the reboot of <em>Wassup Man</em> at Studio LuluLala.</p>
     <div class="cta">
       <a class="btn solid" href="#wassup-man">See the work</a>
+      <a class="btn" href="https://docs.google.com/document/d/1862yPai7PGF8jHtA5ghht4ic3S866PZZ5amnogLB-PM/edit?tab=t.0" target="_blank" rel="noopener">Resume ↗</a>
       <a class="btn" href="mailto:heimishee@gmail.com">heimishee@gmail.com</a>
     </div>
   </section>
@@ -143,10 +155,20 @@ footer small { display: block; width: 100%; color: var(--muted); }
       <p>Studio LuluLala (HLL JoongAng), Production Team 2 · Producer (PD)</p>
     </div>
 
-    <figure class="feature">
-      <img src="img/p3.jpg" width="3840" height="2160" alt="Grid of Wassup Man episode thumbnails from the 2026 reboot season" loading="lazy">
-      <figcaption>The 26 Wassup Man videos I contributed to in 2026.</figcaption>
-    </figure>
+    <div class="reel">
+      <p class="reel-head"><b>26 videos</b> · <b>24.2M</b> total views</p>
+      <div class="reel-grid">
+        <a href="img/wm-grid-1.jpg" target="_blank" rel="noopener"><img src="img/wm-grid-1.jpg" width="2314" height="1202" alt="Wassup Man episode thumbnails: Mullae-dong, Dongdaemun, Han River, university festival, Lotte World, Yaksu" loading="lazy"></a>
+        <a href="img/wm-grid-2.jpg" target="_blank" rel="noopener"><img src="img/wm-grid-2.jpg" width="2304" height="1208" alt="Wassup Man episode thumbnails: Grandpa&#8217;s Hongdae, Mangwon-dong, 57th birthday date, apology, Busan" loading="lazy"></a>
+        <a href="img/wm-grid-3.jpg" target="_blank" rel="noopener"><img src="img/wm-grid-3.jpg" width="2342" height="1214" alt="Wassup Man Japan series thumbnails: maid cafe, convenience stores, Tokyo shopping, Shibuya, Itaewon, Haeundae" loading="lazy"></a>
+        <a href="img/wm-grid-4.jpg" target="_blank" rel="noopener"><img src="img/wm-grid-4.jpg" width="2356" height="1200" alt="Wassup Man episode thumbnails: makeover project, Seongsu, Jamsil baseball stadium, Hongdae, Seosulla-gil" loading="lazy"></a>
+      </div>
+      <div class="reel-row">
+        <a href="img/wm-grid-5.jpg" target="_blank" rel="noopener"><img src="img/wm-grid-5.jpg" width="2340" height="632" alt="Wassup Man reboot launch episodes" loading="lazy"></a>
+        <a href="img/wm-grid-6.jpg" target="_blank" rel="noopener"><img src="img/wm-grid-6.jpg" width="796" height="600" alt="Wassup Man reboot teaser" loading="lazy"></a>
+      </div>
+      <p class="reel-cap">Every Wassup Man video I worked on in 2026, newest first. Click any image to see it full size.</p>
+    </div>
 
     <article class="clip">
       <a class="frame" href="https://youtu.be/Xuk3VDz7VFU" target="_blank" rel="noopener"><img src="img/p2.jpg" width="2142" height="1641" alt="Stills from the Wassup Man Japan convenience store episode and the season poster" loading="lazy"></a>
@@ -395,6 +417,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
   <div class="wrap">
     <h2>Let’s make something people watch.</h2>
     <a class="mail" href="mailto:heimishee@gmail.com">heimishee@gmail.com</a>
+    <a class="mail" href="https://docs.google.com/document/d/1862yPai7PGF8jHtA5ghht4ic3S866PZZ5amnogLB-PM/edit?tab=t.0" target="_blank" rel="noopener">Resume ↗</a>
     <small>© 2026 Minseo Park · Seoul, South Korea</small>
   </div>
 </footer>
