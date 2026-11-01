@@ -8,9 +8,8 @@
 <meta property="og:title" content="Minseo Park — Video Producer & Editor">
 <meta property="og:description" content="24.2M views across 26 Wassup Man videos. 185 Shorts, three past 10M views.">
 <meta property="og:image" content="img/p3.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<!-- Apple SD Gothic Neo is the portfolio deck's font; Pretendard is the closest free match for Windows and Android. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
 /* Layout: one long reel. Each body of work is a "track"; each project is a clip with its frame on one side and notes on the other. */
 :root {
@@ -21,15 +20,15 @@
   --soft: #f6f6f4;
   --accent: #2f7d12;   /* the green used for stats in the original deck */
   --rec: #d93a1c;      /* record-light red for small markers */
-  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --display: "Apple SD Gothic Neo", "Pretendard", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --body: var(--display);
+  --mono: var(--display);
   color-scheme: light;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 .wrap { max-width: 1160px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); }
@@ -37,7 +36,7 @@ a { color: inherit; }
 /* Top bar */
 .bar { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; }
-.bar b { font-family: var(--display); font-weight: 800; letter-spacing: .02em; }
+.bar b { font-family: var(--display); font-weight: 700; letter-spacing: .02em; }
 .bar nav { display: flex; gap: 20px; font-size: 14px; }
 .bar nav a { text-decoration: none; color: var(--muted); }
 .bar nav a:hover { color: var(--ink); }
@@ -47,7 +46,7 @@ a { color: inherit; }
 .hero { padding-block: 72px 48px; }
 .rec { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; }
 .rec::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--rec); }
-h1 { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 9vw, 112px); line-height: .95; letter-spacing: -0.02em; margin: 18px 0 20px; text-wrap: balance; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(48px, 9vw, 112px); line-height: .95; letter-spacing: -0.02em; margin: 18px 0 20px; text-wrap: balance; }
 .lede { font-size: clamp(18px, 2.2vw, 22px); max-width: 40ch; margin: 0; color: #333; }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1.5px solid var(--ink); }
@@ -59,7 +58,7 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 9vw, 
 .stat { padding: 22px 20px 22px 0; border-right: 1px solid var(--line); }
 .stat + .stat { padding-left: 20px; }
 .stat:last-child { border-right: 0; }
-.stat .n { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 4.6vw, 52px); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat .n { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 4.6vw, 52px); line-height: 1; font-variant-numeric: tabular-nums; }
 .stat .n em { font-style: normal; color: var(--accent); }
 .stat .l { margin-top: 8px; font-size: 14px; color: var(--muted); }
 @media (max-width: 760px) { .stats { grid-template-columns: 1fr 1fr; } .stat:nth-child(2) { border-right: 0; } .stat:nth-child(3) { padding-left: 0; } .stat:nth-child(n+3) { border-top: 1px solid var(--line); } }
@@ -68,7 +67,7 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 9vw, 
 .track { padding-block: 80px 24px; }
 .track-head { display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: baseline; border-bottom: 1px solid var(--ink); padding-bottom: 14px; margin-bottom: 40px; }
 .track-head .tc { font-family: var(--mono); font-size: 13px; color: var(--muted); }
-.track-head h2 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.05; margin: 0; }
+.track-head h2 { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 4vw, 44px); line-height: 1.05; margin: 0; }
 .track-head p { grid-column: 2; margin: 6px 0 0; color: var(--muted); }
 @media (max-width: 640px) { .track-head { grid-template-columns: 1fr; gap: 4px; } .track-head p { grid-column: 1; } }
 
@@ -81,10 +80,10 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 9vw, 
 .clip:first-of-type { border-top: 0; }
 .clip .frame { background: var(--soft); border-radius: 6px; overflow: hidden; }
 .clip .frame img { width: 100%; height: auto; }
-.clip h3 { font-family: var(--display); font-weight: 800; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.1; margin: 0; text-wrap: balance; }
-.meta { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin: 10px 0 16px; letter-spacing: .02em; }
-.clip p { margin: 0 0 18px; color: #333; max-width: 60ch; }
-.roles { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 6px; font-size: 15px; }
+.clip h3 { font-family: var(--display); font-weight: 700; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.1; margin: 0; text-wrap: balance; }
+.meta { font-family: var(--mono); font-size: 13px; font-weight: 300; color: #222; margin: 10px 0 16px; letter-spacing: .04em; }
+.clip p { margin: 0 0 18px; color: #555; font-weight: 300; max-width: 60ch; }
+.roles { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 6px; font-size: 15px; color: #555; font-weight: 300; }
 .roles li { display: grid; grid-template-columns: 28px 1fr; }
 .roles li span { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 3px; }
 .result { border: 1px dashed #b9b9b9; border-radius: 10px; padding: 14px 16px; font-size: 14px; color: var(--muted); }
@@ -97,7 +96,7 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 9vw, 
 
 footer { border-top: 1px solid var(--ink); margin-top: 80px; padding-block: 40px 56px; }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: baseline; }
-footer h2 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 40px); margin: 0; }
+footer h2 { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 4vw, 40px); margin: 0; }
 footer a.mail { font-size: clamp(18px, 2.4vw, 24px); font-weight: 600; }
 footer small { display: block; width: 100%; color: var(--muted); }
 </style>
@@ -145,12 +144,12 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </div>
 
     <figure class="feature">
-      <img src="img/p3.jpg" width="2112" height="1188" alt="Grid of Wassup Man episode thumbnails from the 2026 reboot season" loading="lazy">
+      <img src="img/p3.jpg" width="3840" height="2160" alt="Grid of Wassup Man episode thumbnails from the 2026 reboot season" loading="lazy">
       <figcaption>The 26 Wassup Man videos I contributed to in 2026.</figcaption>
     </figure>
 
     <article class="clip">
-      <a class="frame" href="https://youtu.be/Xuk3VDz7VFU" target="_blank" rel="noopener"><img src="img/p2.jpg" width="1183" height="909" alt="Stills from the Wassup Man Japan convenience store episode and the season poster" loading="lazy"></a>
+      <a class="frame" href="https://youtu.be/Xuk3VDz7VFU" target="_blank" rel="noopener"><img src="img/p2.jpg" width="2142" height="1641" alt="Stills from the Wassup Man Japan convenience store episode and the season poster" loading="lazy"></a>
       <div>
         <h3>‘Wassup Man’ Konbini</h3>
         <div class="meta">MID-FORM EPISODE · 18 MIN · 2026</div>
@@ -174,7 +173,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </article>
 
     <article class="clip">
-      <a class="frame" href="https://youtu.be/eoXQRAKt3e4" target="_blank" rel="noopener"><img src="img/p4.jpg" width="1183" height="912" alt="Stills from the Wassup Man Busan Jeonpo episode" loading="lazy"></a>
+      <a class="frame" href="https://youtu.be/eoXQRAKt3e4" target="_blank" rel="noopener"><img src="img/p4.jpg" width="2142" height="1647" alt="Stills from the Wassup Man Busan Jeonpo episode" loading="lazy"></a>
       <div>
         <h3>‘Wassup Man’ Jeonpo</h3>
         <div class="meta">MID-FORM EPISODE · 20 MIN · 2026</div>
@@ -198,7 +197,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </article>
 
     <article class="clip">
-      <a class="frame" href="https://www.youtube.com/@WassupMan/shorts" target="_blank" rel="noopener"><img src="img/p5.jpg" width="965" height="1080" alt="Top five Wassup Man Shorts, three of them past 10 million views" loading="lazy"></a>
+      <a class="frame" href="https://www.youtube.com/@WassupMan/shorts" target="_blank" rel="noopener"><img src="img/p5.jpg" width="1747" height="1954" alt="Top five Wassup Man Shorts, three of them past 10 million views" loading="lazy"></a>
       <div>
         <h3>‘Wassup Man’ Shorts <span class="badge">Top 6 on the channel</span></h3>
         <div class="meta">SHORT-FORM · 185 SHORTS · 2026</div>
@@ -230,7 +229,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </div>
 
     <article class="clip">
-      <a class="frame" href="https://youtube.com/shorts/GT4xuOXzpOY" target="_blank" rel="noopener"><img src="img/p6.jpg" width="1205" height="1081" alt="WOW Mukbang short clips and the NAVER Shopping Live channel page" loading="lazy"></a>
+      <a class="frame" href="https://youtube.com/shorts/GT4xuOXzpOY" target="_blank" rel="noopener"><img src="img/p6.jpg" width="2181" height="1955" alt="WOW Mukbang short clips and the NAVER Shopping Live channel page" loading="lazy"></a>
       <div>
         <h3>‘WOW Mukbang’ Clips</h3>
         <div class="meta">LIVE COMMERCE SHORT-FORM · 6 CLIPS · 2024</div>
@@ -253,7 +252,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </article>
 
     <article class="clip">
-      <a class="frame" href="https://youtube.com/shorts/NQ00XIHSQu0" target="_blank" rel="noopener"><img src="img/p7.jpg" width="1017" height="880" alt="Jichulgwang teaser stills and a product price card" loading="lazy"></a>
+      <a class="frame" href="https://youtube.com/shorts/NQ00XIHSQu0" target="_blank" rel="noopener"><img src="img/p7.jpg" width="1839" height="1591" alt="Jichulgwang teaser stills and a product price card" loading="lazy"></a>
       <div>
         <h3>‘Jichulgwang’ Teasers</h3>
         <div class="meta">TEASER CLIPS · 2024</div>
@@ -275,7 +274,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </article>
 
     <article class="clip">
-      <a class="frame" href="https://youtube.com/shorts/akhM0gYQwK8" target="_blank" rel="noopener"><img src="img/p9.jpg" width="1047" height="914" alt="Google Play gift card promo clip frames" loading="lazy"></a>
+      <a class="frame" href="https://youtube.com/shorts/akhM0gYQwK8" target="_blank" rel="noopener"><img src="img/p9.jpg" width="1893" height="1653" alt="Google Play gift card promo clip frames" loading="lazy"></a>
       <div>
         <h3>‘Google’ Promo Clips</h3>
         <div class="meta">COMMISSIONED · MONTHLY · 2024</div>
@@ -290,7 +289,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </article>
 
     <article class="clip">
-      <a class="frame" href="https://youtube.com/shorts/j1jwli0ADd8" target="_blank" rel="noopener"><img src="img/p8.jpg" width="989" height="868" alt="Unibi cap fashion clip stills" loading="lazy"></a>
+      <a class="frame" href="https://youtube.com/shorts/j1jwli0ADd8" target="_blank" rel="noopener"><img src="img/p8.jpg" width="1787" height="1568" alt="Unibi cap fashion clip stills" loading="lazy"></a>
       <div>
         <h3>‘Unibi’ Promo Clips</h3>
         <div class="meta">FASHION SHORT-FORM · 2024</div>
@@ -314,7 +313,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </div>
 
     <article class="clip">
-      <a class="frame" href="https://youtu.be/iJvUk4Hr8lU" target="_blank" rel="noopener"><img src="img/p11.jpg" width="1033" height="782" alt="Editing timeline and frames from the instrument lesson videos" loading="lazy"></a>
+      <a class="frame" href="https://youtu.be/iJvUk4Hr8lU" target="_blank" rel="noopener"><img src="img/p11.jpg" width="1869" height="1411" alt="Editing timeline and frames from the instrument lesson videos" loading="lazy"></a>
       <div>
         <h3>Instrument Lesson Videos</h3>
         <div class="meta">NATIONAL GUGAK CENTER · COMMISSIONED · 2024</div>
@@ -330,7 +329,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </article>
 
     <article class="clip">
-      <div class="frame"><img src="img/p14.jpg" width="1036" height="599" alt="Pitch deck slides for iKung, a micro-insurance for AI digital textbook devices" loading="lazy"></div>
+      <div class="frame"><img src="img/p14.jpg" width="1875" height="1079" alt="Pitch deck slides for iKung, a micro-insurance for AI digital textbook devices" loading="lazy"></div>
       <div>
         <h3>‘iKung Insurance’ <span class="badge">Excellence Prize</span></h3>
         <div class="meta">MINISTRY OF EDUCATION &amp; CHUNG-ANG UNIVERSITY LINC · 2024</div>
@@ -345,7 +344,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </article>
 
     <article class="clip">
-      <a class="frame" href="https://youtu.be/Iqw52A4LUJA" target="_blank" rel="noopener"><img src="img/p10.jpg" width="1196" height="639" alt="Frames from the MBTI experiment documentary" loading="lazy"></a>
+      <a class="frame" href="https://youtu.be/Iqw52A4LUJA" target="_blank" rel="noopener"><img src="img/p10.jpg" width="2164" height="1153" alt="Frames from the MBTI experiment documentary" loading="lazy"></a>
       <div>
         <h3>Documentary: ‘The MBTI Experiment’</h3>
         <div class="meta">PERSONAL PROJECT · 2021</div>
@@ -361,7 +360,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </article>
 
     <article class="clip">
-      <div class="frame"><img src="img/p13.jpg" width="1052" height="723" alt="KASSETTE campaign photos and exhibition poster" loading="lazy"></div>
+      <div class="frame"><img src="img/p13.jpg" width="1904" height="1304" alt="KASSETTE campaign photos and exhibition poster" loading="lazy"></div>
       <div>
         <h3>‘KASSETTE’ Marketing Project <span class="badge">Grand Prize</span></h3>
         <div class="meta">KT Y FUTURIST, 1ST COHORT · 2021</div>
@@ -376,7 +375,7 @@ footer small { display: block; width: 100%; color: var(--muted); }
     </article>
 
     <article class="clip">
-      <div class="frame"><img src="img/p12.jpg" width="1135" height="852" alt="HBAF rebranding campaign board with four video concepts" loading="lazy"></div>
+      <div class="frame"><img src="img/p12.jpg" width="2053" height="1539" alt="HBAF rebranding campaign board with four video concepts" loading="lazy"></div>
       <div>
         <h3>‘HBAF’ Brand Marketing</h3>
         <div class="meta">CHEIL WORLDWIDE IDEA FESTIVAL · 2021</div>
