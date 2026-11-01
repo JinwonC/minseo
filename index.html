@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minseo Park — Video Producer & Editor</title>
+<meta name="description" content="Portfolio of Minseo Park, YouTube producer and video editor: Wassup Man (Studio LuluLala), NAVER Shopping Live short-form, and more.">
+<meta property="og:title" content="Minseo Park — Video Producer & Editor">
+<meta property="og:description" content="24.2M views across 26 Wassup Man videos. 185 Shorts, three past 10M views.">
+<meta property="og:image" content="img/p3.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one long reel. Each body of work is a "track"; each project is a clip with its frame on one side and notes on the other. */
+:root {
+  --bg: #ffffff;
+  --ink: #111111;
+  --muted: #5f6368;
+  --line: #e4e4e4;
+  --soft: #f6f6f4;
+  --accent: #2f7d12;   /* the green used for stats in the original deck */
+  --rec: #d93a1c;      /* record-light red for small markers */
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); }
+
+/* Top bar */
+.bar { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; }
+.bar b { font-family: var(--display); font-weight: 800; letter-spacing: .02em; }
+.bar nav { display: flex; gap: 20px; font-size: 14px; }
+.bar nav a { text-decoration: none; color: var(--muted); }
+.bar nav a:hover { color: var(--ink); }
+@media (max-width: 640px) { .bar nav a:not(.contact) { display: none; } }
+
+/* Hero */
+.hero { padding-block: 72px 48px; }
+.rec { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; }
+.rec::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--rec); }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 9vw, 112px); line-height: .95; letter-spacing: -0.02em; margin: 18px 0 20px; text-wrap: balance; }
+.lede { font-size: clamp(18px, 2.2vw, 22px); max-width: 40ch; margin: 0; color: #333; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1.5px solid var(--ink); }
+.btn.solid { background: var(--ink); color: #fff; }
+.btn:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* Numbers */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); }
+.stat { padding: 22px 20px 22px 0; border-right: 1px solid var(--line); }
+.stat + .stat { padding-left: 20px; }
+.stat:last-child { border-right: 0; }
+.stat .n { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 4.6vw, 52px); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat .n em { font-style: normal; color: var(--accent); }
+.stat .l { margin-top: 8px; font-size: 14px; color: var(--muted); }
+@media (max-width: 760px) { .stats { grid-template-columns: 1fr 1fr; } .stat:nth-child(2) { border-right: 0; } .stat:nth-child(3) { padding-left: 0; } .stat:nth-child(n+3) { border-top: 1px solid var(--line); } }
+
+/* Tracks */
+.track { padding-block: 80px 24px; }
+.track-head { display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: baseline; border-bottom: 1px solid var(--ink); padding-bottom: 14px; margin-bottom: 40px; }
+.track-head .tc { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.track-head h2 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.05; margin: 0; }
+.track-head p { grid-column: 2; margin: 6px 0 0; color: var(--muted); }
+@media (max-width: 640px) { .track-head { grid-template-columns: 1fr; gap: 4px; } .track-head p { grid-column: 1; } }
+
+.feature { margin: 0 0 56px; }
+.feature img { width: 100%; border-radius: 6px; }
+.feature figcaption { margin-top: 10px; font-size: 14px; color: var(--muted); }
+
+/* Clips */
+.clip { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 40px; align-items: start; padding-block: 36px; border-top: 1px solid var(--line); }
+.clip:first-of-type { border-top: 0; }
+.clip .frame { background: var(--soft); border-radius: 6px; overflow: hidden; }
+.clip .frame img { width: 100%; height: auto; }
+.clip h3 { font-family: var(--display); font-weight: 800; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.1; margin: 0; text-wrap: balance; }
+.meta { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin: 10px 0 16px; letter-spacing: .02em; }
+.clip p { margin: 0 0 18px; color: #333; max-width: 60ch; }
+.roles { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 6px; font-size: 15px; }
+.roles li { display: grid; grid-template-columns: 28px 1fr; }
+.roles li span { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 3px; }
+.result { border: 1px dashed #b9b9b9; border-radius: 10px; padding: 14px 16px; font-size: 14px; color: var(--muted); }
+.result strong { display: block; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+.result ul { margin: 0; padding-left: 18px; }
+.watch { display: inline-flex; margin-top: 18px; font-weight: 600; font-size: 15px; text-decoration: none; border-bottom: 1.5px solid var(--ink); padding-bottom: 1px; }
+.watch:hover { color: var(--accent); border-color: var(--accent); }
+.badge { display: inline-block; font-size: 12px; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 1px 10px; margin-left: 8px; vertical-align: middle; }
+@media (max-width: 860px) { .clip { grid-template-columns: 1fr; gap: 22px; } }
+
+footer { border-top: 1px solid var(--ink); margin-top: 80px; padding-block: 40px 56px; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: baseline; }
+footer h2 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 40px); margin: 0; }
+footer a.mail { font-size: clamp(18px, 2.4vw, 24px); font-weight: 600; }
+footer small { display: block; width: 100%; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <b>MINSEO PARK</b>
+    <nav>
+      <a href="#wassup-man">Wassup Man</a>
+      <a href="#naver">NAVER Shopping Live</a>
+      <a href="#more">More work</a>
+      <a class="contact" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <span class="rec">Video Producer &amp; Editor · Seoul</span>
+    <h1>Minseo Park</h1>
+    <p class="lede">I plan, shoot and cut YouTube variety content and short-form video. Most recently a producer on the reboot of <em>Wassup Man</em> at Studio LuluLala.</p>
+    <div class="cta">
+      <a class="btn solid" href="#wassup-man">See the work</a>
+      <a class="btn" href="mailto:heimishee@gmail.com">heimishee@gmail.com</a>
+    </div>
+  </section>
+
+  <section class="wrap" aria-label="Highlights">
+    <div class="stats">
+      <div class="stat"><div class="n">24.2<em>M</em></div><div class="l">views across 26 Wassup Man videos</div></div>
+      <div class="stat"><div class="n">930<em>K</em></div><div class="l">average views per video</div></div>
+      <div class="stat"><div class="n">185</div><div class="l">Shorts planned, edited and published</div></div>
+      <div class="stat"><div class="n">10.8<em>M</em></div><div class="l">top Short, one of three past 10M views</div></div>
+    </div>
+  </section>
+
+  <!-- Track 1 -->
+  <section class="track wrap" id="wassup-man">
+    <div class="track-head">
+      <span class="tc">2026</span>
+      <h2>Wassup Man</h2>
+      <p>Studio LuluLala (HLL JoongAng), Production Team 2 · Producer (PD)</p>
+    </div>
+
+    <figure class="feature">
+      <img src="img/p3.jpg" width="2112" height="1188" alt="Grid of Wassup Man episode thumbnails from the 2026 reboot season" loading="lazy">
+      <figcaption>The 26 Wassup Man videos I contributed to in 2026.</figcaption>
+    </figure>
+
+    <article class="clip">
+      <a class="frame" href="https://youtu.be/Xuk3VDz7VFU" target="_blank" rel="noopener"><img src="img/p2.jpg" width="1183" height="909" alt="Stills from the Wassup Man Japan convenience store episode and the season poster" loading="lazy"></a>
+      <div>
+        <h3>‘Wassup Man’ Konbini</h3>
+        <div class="meta">MID-FORM EPISODE · 18 MIN · 2026</div>
+        <p>One of four episodes in the Japan series. The cast visits Japan’s three major convenience store chains to taste and review their most popular foods and products.</p>
+        <ul class="roles">
+          <li><span>01</span>Edited the 07:00–12:20 segment solo</li>
+          <li><span>02</span>Planned the episode and directed on set</li>
+          <li><span>03</span>Footage backup, sync, dialogue captions and VCR</li>
+        </ul>
+        <div class="result">
+          <strong>900K views · 60% contribution</strong>
+          <ul>
+            <li>Found cast reactions and fun beats to offset a one-room shoot</li>
+            <li>Boosted the variety feel with varied layouts and sound effects</li>
+            <li>Built a hooking opening with early highlights and a VCR</li>
+            <li>Designed review-summary screens with ratings for each food</li>
+          </ul>
+        </div>
+        <a class="watch" href="https://youtu.be/Xuk3VDz7VFU" target="_blank" rel="noopener">Watch the episode ↗</a>
+      </div>
+    </article>
+
+    <article class="clip">
+      <a class="frame" href="https://youtu.be/eoXQRAKt3e4" target="_blank" rel="noopener"><img src="img/p4.jpg" width="1183" height="912" alt="Stills from the Wassup Man Busan Jeonpo episode" loading="lazy"></a>
+      <div>
+        <h3>‘Wassup Man’ Jeonpo</h3>
+        <div class="meta">MID-FORM EPISODE · 20 MIN · 2026</div>
+        <p>One of two episodes in the Busan series, exploring Jeonpo, a neighborhood popular with Gen Z, and its local mood and charm.</p>
+        <ul class="roles">
+          <li><span>01</span>Edited the 08:00–15:00 segment solo</li>
+          <li><span>02</span>Researched Jeonpo and planned the route</li>
+          <li><span>03</span>Designed the shooting route and ran the set</li>
+          <li><span>04</span>Footage backup, sync, dialogue captions and VCR</li>
+        </ul>
+        <div class="result">
+          <strong>880K views · 60% contribution</strong>
+          <ul>
+            <li>Researched Jeonpo’s hot spots and route in advance</li>
+            <li>Planned the route around each spot and guided the cast on set</li>
+            <li>Edited around the cast’s banter and rivalry over each region’s signature food</li>
+          </ul>
+        </div>
+        <a class="watch" href="https://youtu.be/eoXQRAKt3e4" target="_blank" rel="noopener">Watch the episode ↗</a>
+      </div>
+    </article>
+
+    <article class="clip">
+      <a class="frame" href="https://www.youtube.com/@WassupMan/shorts" target="_blank" rel="noopener"><img src="img/p5.jpg" width="965" height="1080" alt="Top five Wassup Man Shorts, three of them past 10 million views" loading="lazy"></a>
+      <div>
+        <h3>‘Wassup Man’ Shorts <span class="badge">Top 6 on the channel</span></h3>
+        <div class="meta">SHORT-FORM · 185 SHORTS · 2026</div>
+        <p>Recut each episode’s best moments into short, punchy Shorts that hook new viewers and drive them back to the full episodes. I made all six of the channel’s most-viewed Shorts.</p>
+        <ul class="roles">
+          <li><span>01</span>Planned, produced and published ~185 Shorts</li>
+          <li><span>02</span>Pulled highlights and recut them for short form</li>
+          <li><span>03</span>Planned hook-driven titles and thumbnails</li>
+        </ul>
+        <div class="result">
+          <strong>3 Shorts past 10M views · top 10.8M</strong>
+          <ul>
+            <li>Found each episode’s biggest laughs and key moments</li>
+            <li>Short-form edits that grab attention in seconds</li>
+            <li>Wrote hook-driven titles that spark clicks</li>
+          </ul>
+        </div>
+        <a class="watch" href="https://www.youtube.com/@WassupMan/shorts" target="_blank" rel="noopener">See the Shorts ↗</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- Track 2 -->
+  <section class="track wrap" id="naver">
+    <div class="track-head">
+      <span class="tc">2024</span>
+      <h2>NAVER Shopping Live</h2>
+      <p>Video Commerce Partnerships · Content Production Intern</p>
+    </div>
+
+    <article class="clip">
+      <a class="frame" href="https://youtube.com/shorts/GT4xuOXzpOY" target="_blank" rel="noopener"><img src="img/p6.jpg" width="1205" height="1081" alt="WOW Mukbang short clips and the NAVER Shopping Live channel page" loading="lazy"></a>
+      <div>
+        <h3>‘WOW Mukbang’ Clips</h3>
+        <div class="meta">LIVE COMMERCE SHORT-FORM · 6 CLIPS · 2024</div>
+        <p>Cut hour-long episodes of ‘WOW Mukbang,’ a mukbang show on NAVER Shopping Live, into clips of about two minutes. I also ran the channel’s Short Clips tab and analyzed CTR, views and purchase conversion.</p>
+        <ul class="roles">
+          <li><span>01</span>Assisted on-site live production</li>
+          <li><span>02</span>Designed the short-form format</li>
+          <li><span>03</span>Editing: cuts, captions, sound effects</li>
+        </ul>
+        <div class="result">
+          <strong>200K views · 100% contribution</strong>
+          <ul>
+            <li>Logged sizzle, laughs and new-tech moments during each live</li>
+            <li>Opened each clip with its most hooking 3 seconds</li>
+            <li>Picked shots that make each product look appealing</li>
+          </ul>
+        </div>
+        <a class="watch" href="https://youtube.com/shorts/GT4xuOXzpOY" target="_blank" rel="noopener">Watch a clip ↗</a>
+      </div>
+    </article>
+
+    <article class="clip">
+      <a class="frame" href="https://youtube.com/shorts/NQ00XIHSQu0" target="_blank" rel="noopener"><img src="img/p7.jpg" width="1017" height="880" alt="Jichulgwang teaser stills and a product price card" loading="lazy"></a>
+      <div>
+        <h3>‘Jichulgwang’ Teasers</h3>
+        <div class="meta">TEASER CLIPS · 2024</div>
+        <p>On ‘Jichulgwang,’ NAVER Shopping Live’s flagship show hosted by Hwang Kwanghee, I handled merchandising, camera setup, live intro editing and teaser clips.</p>
+        <ul class="roles">
+          <li><span>01</span>Assisted on-site live production</li>
+          <li><span>02</span>Designed and edited the short-form format</li>
+          <li><span>03</span>Editing: cuts, captions, sound effects</li>
+        </ul>
+        <div class="result">
+          <strong>100% contribution</strong>
+          <ul>
+            <li>Edited to showcase each day’s featured items</li>
+            <li>Made list price, sale price and discount easy to read</li>
+          </ul>
+        </div>
+        <a class="watch" href="https://youtube.com/shorts/NQ00XIHSQu0" target="_blank" rel="noopener">Watch a teaser ↗</a>
+      </div>
+    </article>
+
+    <article class="clip">
+      <a class="frame" href="https://youtube.com/shorts/akhM0gYQwK8" target="_blank" rel="noopener"><img src="img/p9.jpg" width="1047" height="914" alt="Google Play gift card promo clip frames" loading="lazy"></a>
+      <div>
+        <h3>‘Google’ Promo Clips</h3>
+        <div class="meta">COMMISSIONED · MONTHLY · 2024</div>
+        <p>Monthly clips promoting Google Day gift cards on NAVER Shopping Live, contributing to sales in the hundreds of millions of won. A typing effect kept them easy to read.</p>
+        <ul class="roles">
+          <li><span>01</span>Emailed directly with Google’s team</li>
+          <li><span>02</span>Designed and edited the short-form format</li>
+          <li><span>03</span>Editing: cuts, captions, sound effects</li>
+        </ul>
+        <a class="watch" href="https://youtube.com/shorts/akhM0gYQwK8" target="_blank" rel="noopener">Watch a clip ↗</a>
+      </div>
+    </article>
+
+    <article class="clip">
+      <a class="frame" href="https://youtube.com/shorts/j1jwli0ADd8" target="_blank" rel="noopener"><img src="img/p8.jpg" width="989" height="868" alt="Unibi cap fashion clip stills" loading="lazy"></a>
+      <div>
+        <h3>‘Unibi’ Promo Clips</h3>
+        <div class="meta">FASHION SHORT-FORM · 2024</div>
+        <p>Fashion clips promoting caps from the brand Unibi, using clipping masks to compare many colors and designs at a fast pace.</p>
+        <ul class="roles">
+          <li><span>01</span>Appeared on camera</li>
+          <li><span>02</span>Planned the video and joined the shoot</li>
+          <li><span>03</span>Editing: cuts, captions, effects</li>
+        </ul>
+        <a class="watch" href="https://youtube.com/shorts/j1jwli0ADd8" target="_blank" rel="noopener">Watch the clip ↗</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- Track 3 -->
+  <section class="track wrap" id="more">
+    <div class="track-head">
+      <span class="tc">2021–2024</span>
+      <h2>More work</h2>
+      <p>Commissioned, personal and competition projects</p>
+    </div>
+
+    <article class="clip">
+      <a class="frame" href="https://youtu.be/iJvUk4Hr8lU" target="_blank" rel="noopener"><img src="img/p11.jpg" width="1033" height="782" alt="Editing timeline and frames from the instrument lesson videos" loading="lazy"></a>
+      <div>
+        <h3>Instrument Lesson Videos</h3>
+        <div class="meta">NATIONAL GUGAK CENTER · COMMISSIONED · 2024</div>
+        <p>Educational videos for the National Gugak Center that teach folk songs on the sogeum and danso flutes through fingering and repetition.</p>
+        <ul class="roles">
+          <li><span>01</span>Assisted with filming source footage</li>
+          <li><span>02</span>Organized source files</li>
+          <li><span>03</span>Editing: cuts, motion, sound and the full edit</li>
+          <li><span>04</span>Created some design assets</li>
+        </ul>
+        <a class="watch" href="https://youtu.be/iJvUk4Hr8lU" target="_blank" rel="noopener">Watch a lesson ↗</a>
+      </div>
+    </article>
+
+    <article class="clip">
+      <div class="frame"><img src="img/p14.jpg" width="1036" height="599" alt="Pitch deck slides for iKung, a micro-insurance for AI digital textbook devices" loading="lazy"></div>
+      <div>
+        <h3>‘iKung Insurance’ <span class="badge">Excellence Prize</span></h3>
+        <div class="meta">MINISTRY OF EDUCATION &amp; CHUNG-ANG UNIVERSITY LINC · 2024</div>
+        <p>At an AIDT startup idea camp, our team proposed micro-insurance that covers loss and damage of AI digital textbook devices.</p>
+        <ul class="roles">
+          <li><span>01</span>Joined ideation and planning</li>
+          <li><span>02</span>Market analysis and surveys</li>
+          <li><span>03</span>Revenue model and business strategy</li>
+          <li><span>04</span>Built the milestone plan and designed the pitch deck</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="clip">
+      <a class="frame" href="https://youtu.be/Iqw52A4LUJA" target="_blank" rel="noopener"><img src="img/p10.jpg" width="1196" height="639" alt="Frames from the MBTI experiment documentary" loading="lazy"></a>
+      <div>
+        <h3>Documentary: ‘The MBTI Experiment’</h3>
+        <div class="meta">PERSONAL PROJECT · 2021</div>
+        <p>“Does MBTI really describe who I am?” An experimental documentary that tests common questions about MBTI.</p>
+        <ul class="roles">
+          <li><span>01</span>Planned every shoot and drew storyboards</li>
+          <li><span>02</span>Cast and guided participants</li>
+          <li><span>03</span>Designed the logo and caption templates</li>
+          <li><span>04</span>Director of photography and editor</li>
+        </ul>
+        <a class="watch" href="https://youtu.be/Iqw52A4LUJA" target="_blank" rel="noopener">Watch the documentary ↗</a>
+      </div>
+    </article>
+
+    <article class="clip">
+      <div class="frame"><img src="img/p13.jpg" width="1052" height="723" alt="KASSETTE campaign photos and exhibition poster" loading="lazy"></div>
+      <div>
+        <h3>‘KASSETTE’ Marketing Project <span class="badge">Grand Prize</span></h3>
+        <div class="meta">KT Y FUTURIST, 1ST COHORT · 2021</div>
+        <p>A marketing project to promote the cassette player from KT’s Retro series. KT’s program team chose it for the Grand Prize.</p>
+        <ul class="roles">
+          <li><span>01</span>Joined ideation and planning</li>
+          <li><span>02</span>Shot and produced the promo video</li>
+          <li><span>03</span>Proposed the Instagram promotion strategy</li>
+          <li><span>04</span>Product photography and the exhibition poster</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="clip">
+      <div class="frame"><img src="img/p12.jpg" width="1135" height="852" alt="HBAF rebranding campaign board with four video concepts" loading="lazy"></div>
+      <div>
+        <h3>‘HBAF’ Brand Marketing</h3>
+        <div class="meta">CHEIL WORLDWIDE IDEA FESTIVAL · 2021</div>
+        <p>A rebranding contest for HBAF, whose products are better known than its name. Four videos (H: Help, B: Be my friend, A: Amigo, F: Family) showed the brand’s values with wit.</p>
+        <ul class="roles">
+          <li><span>01</span>Joined ideation, planning and brand research</li>
+          <li><span>02</span>Shoot prep and location scouting</li>
+          <li><span>03</span>Filming and editing</li>
+          <li><span>04</span>Proposed the branding strategy and its impact</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let’s make something people watch.</h2>
+    <a class="mail" href="mailto:heimishee@gmail.com">heimishee@gmail.com</a>
+    <small>© 2026 Minseo Park · Seoul, South Korea</small>
+  </div>
+</footer>
+
+</body>
+</html>
